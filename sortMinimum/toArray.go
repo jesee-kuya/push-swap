@@ -9,6 +9,7 @@ func ToArray(str string) ([]int, string) {
 	arr := strings.Split(str, " ")
 	var res []int
 	for i := 0; i < len(arr); i++ {
+		arr[i] = strings.Trim(arr[i], ",")
 		num, err := strconv.Atoi(arr[i])
 		if err != nil {
 			return nil, "not a number"
