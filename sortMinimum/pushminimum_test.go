@@ -49,6 +49,7 @@ var TestCases2 = []struct {
 	{"Test40", []int{49, 29, 65, 97, 48}, 12},
 	{"Test41", []int{57, 53, 100, 80, 22}, 12},
 	{"Test42", []int{6, 20, 83, 75, 2}, 12},
+	{"Test43", []int{-7, -22, -5, -1, -3}, 12},
 }
 
 func TestPushMinum(t *testing.T) {
