@@ -13,6 +13,8 @@ var TestCases1 = []struct {
 	{"Test1", "2 3 4 5 6 7", []int{2, 3, 4, 5, 6, 7}, ""},
 	{"Test2", "1 8 9 4 5 6 7", []int{1, 8, 9, 4, 5, 6, 7}, ""},
 	{"Test3", "1 ok 2 3 4", nil, "not a number"},
+	{"Test4", "1, 2, 3, 4, 5, 6", []int{1, 2, 3, 4, 5, 6}, ""},
+	{"Test5", "1, 2 ,3 ,4, 5", []int{1, 2, 3, 4, 5, 6}, ""},
 }
 
 func TestToArray(t *testing.T) {
