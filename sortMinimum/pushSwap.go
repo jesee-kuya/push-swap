@@ -8,6 +8,10 @@ func PushSwap(arr []int) ([]string, []int, []int) {
 	maxValue, maxIndex := FindMax(arr)
 	count := 0
 
+	if AllNegative(arr) {
+		arr = append(arr, 1)
+	}
+
 	for !IsSorted(arr) {
 		count++
 		if count > 5 {
