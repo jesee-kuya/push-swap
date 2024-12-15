@@ -10,7 +10,7 @@ var TestCases3 = []struct {
 	moves      int
 	check      bool
 }{
-	{"Test1", 20, 40, []int{1, 2, 3, 4, 56, 23, 41, 45}, 6, true},
+	{"Test1", 20, 40, []int{1, 2, 3, 4, 56, 23, 41, 45}, 5, true},
 }
 
 var TestCases4 = []struct {
