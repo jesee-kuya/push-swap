@@ -3,7 +3,7 @@ package sortLarge
 func MovesDown(upperLimit int, lowerLimit int, arr []int) (int, bool) {
 	for i := 0; i < len(arr); i++ {
 		if arr[i] >= lowerLimit && arr[i] <= upperLimit {
-			return i + 1, true
+			return i, true
 		}
 	}
 	return 0, false
