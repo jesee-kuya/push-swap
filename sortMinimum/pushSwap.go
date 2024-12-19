@@ -54,3 +54,46 @@ func PushSwap(arr []int) ([]string, []int, []int) {
 	}
 	return operations, arr, tempStack
 }
+
+func PreEmpt(arr []int) ([]string, []int, []int) {
+	operations := []string{}
+	tempStack := []int{}
+	minVal := FindMin(arr)
+	maxVal := minVal + 20
+
+	for len(arr) > 0 {
+		_, movesUp := RangeUp(minVal, maxVal, arr)
+		_, movesDown := RangeUp(minVal, maxVal, arr)
+
+		if movesDown < 0 || movesUp < 0 {
+			minVal = maxVal
+			maxVal += 20
+			continue
+		}
+
+		if movesDown < movesUp {
+			for movesDown > 0 {
+				arr = RotateLeft(arr)
+				operations = append(operations, "ra")
+				movesDown--
+			}
+		}
+		if movesDown > movesUp {
+			for movesUp > 0 {
+				arr = RotateRight(arr)
+				operations = append(operations, "rra")
+				movesUp--
+			}
+		}
+		temp1, action, ops, moves := PreSort(arr[0], tempStack)
+		tempStack = temp1
+		operations = append(operations, ops...)
+		tempStack = append([]int{arr[0]}, tempStack...)
+		arr = arr[1:]
+		operations = append(operations, "pb")
+		temp, resl := SortTemp(moves, action, tempStack)
+		tempStack = temp
+		operations = append(operations, resl...)
+	}
+	return operations, arr, tempStack
+}
