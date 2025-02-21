@@ -66,5 +66,7 @@ func main() {
 
 		res := sortMinimum.Checker(arr, instructions)
 		fmt.Println(res)
+	} else {
+		fmt.Println("Error: usage [./push-swap] or [./checker] [arguments]\nExample: ./push-swap 1 2 3 4 5")
 	}
 }
