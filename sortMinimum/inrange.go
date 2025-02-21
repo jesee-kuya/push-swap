@@ -10,7 +10,7 @@ func RangeDown(minVal int, maxVal int, arr []int) (int, int) {
 }
 
 func RangeUp(minVal int, maxVal int, arr []int) (int, int) {
-	for i := len(arr) - 1; i >= 0 ; i-- {
+	for i := len(arr) - 1; i >= 0; i-- {
 		if arr[i] >= minVal && arr[i] <= maxVal {
 			return arr[i], len(arr) - i
 		}
