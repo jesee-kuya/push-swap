@@ -1,9 +1,5 @@
 package sortMinimum
 
-import (
-	"fmt"
-)
-
 func Checker(input []int, ops []string) string {
 	arr := append([]int{}, input...)
 	var arrB []int
@@ -95,10 +91,6 @@ func Checker(input []int, ops []string) string {
 			}
 		}
 	}
-
-	fmt.Println(arr)
-	fmt.Println(arrB)
-
 	if IsSorted(arr) && len(arrB) == 0 {
 		return "OK"
 	}
