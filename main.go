@@ -9,19 +9,6 @@ import (
 	"push/sortMinimum"
 )
 
-func hasRepeatingNumbers(arr []int) bool {
-	numMap := make(map[int]bool)
-
-	for _, num := range arr {
-		if numMap[num] {
-			return true
-		}
-		numMap[num] = true
-	}
-
-	return false
-}
-
 func main() {
 	args := os.Args
 	if args[0] == "./push-swap" {
@@ -33,7 +20,7 @@ func main() {
 			fmt.Println("Error")
 			return
 		}
-		if hasRepeatingNumbers(arr) {
+		if sortMinimum.HasRepeatingNumbers(arr) {
 			fmt.Println("Error")
 			return
 		}
@@ -50,7 +37,7 @@ func main() {
 			fmt.Println("Error")
 			return
 		}
-		if hasRepeatingNumbers(arr) {
+		if sortMinimum.HasRepeatingNumbers(arr) {
 			fmt.Println("Error")
 			return
 		}
