@@ -1,7 +1,5 @@
 package sortMinimum
 
-import "fmt"
-
 // PushMinimum finds the sequence of operations to sort the array.
 func PushMinimum(input []int) []string {
 	operations := []string{}
@@ -28,8 +26,5 @@ func PushMinimum(input []int) []string {
 	}
 
 	operations = SortOperations(operations)
-	fmt.Println("Final Array:", arr)
-	fmt.Println("Original Input:", input)
-	fmt.Println("Operations:", operations)
 	return operations
 }
