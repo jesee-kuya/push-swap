@@ -13,7 +13,7 @@ func PreSort(num int, tempStack []int) ([]int, string, []string, int) {
 	}
 	checker := (len(tempStack) - 1) - ind
 
-	if checker + 1 < ind {
+	if checker+1 < ind {
 		moves = checker
 		checker++
 		for checker > 0 {
@@ -24,7 +24,7 @@ func PreSort(num int, tempStack []int) ([]int, string, []string, int) {
 		turn = "reverse"
 
 	}
-	if checker + 1 > ind {
+	if checker+1 > ind {
 		moves = ind
 		for ind > 0 {
 			tempStack = RotateLeft(tempStack)
