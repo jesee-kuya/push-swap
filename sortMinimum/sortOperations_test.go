@@ -7,7 +7,7 @@ var TestCases10 = []struct {
 	input []string
 	res   []string
 }{
-	{"Test1", []string{"sb","sa"}, []string{"ss"}},
+	{"Test1", []string{"sb", "sa"}, []string{"ss"}},
 }
 
 func TestSortOperations(t *testing.T) {
