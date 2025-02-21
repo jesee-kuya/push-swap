@@ -7,11 +7,11 @@ func SortOperations(operations []string) []string {
 			res = append(res, "ss")
 			i++
 			continue
-		} else if operations[i] == "rb" && operations[i + 1] == "ra" {
+		} else if operations[i] == "rb" && operations[i+1] == "ra" {
 			res = append(res, "rr")
 			i++
 			continue
-		} else if operations[i] == "rrb" && operations[i + 1] == "rra" {
+		} else if operations[i] == "rrb" && operations[i+1] == "rra" {
 			res = append(res, "rrr")
 			i++
 			continue
